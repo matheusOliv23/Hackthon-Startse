@@ -2,6 +2,8 @@
 /* FONTE DO PROJETO*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
 /* VARIAVEIS CSS */
 :root{
   
@@ -17,6 +19,8 @@
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+  --background-color-one: black;
+  --background-color-two: #191A19;
   /*fonts*/
 
   --title-font-size: 1.875rem;
@@ -24,8 +28,10 @@
 
   /*fonts*/
 
-  --title-font: 'Roboto', sans-serif;
-  --body-font: 'Roboto', sans-serif;
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'Poppins', sans-serif;
+
+  --max-width-container: 70rem
 
 
 }
@@ -33,7 +39,21 @@
 *{
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
+  margin: 0; 
+}
+
+body::-webkit-scrollbar {
+   width: 8px;
+   height: 5px;
+} 
+
+body::-webkit-scrollbar-thumb {
+   background: var(--base-color-alt);
+   border-radius: 10px;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 ul{
@@ -45,14 +65,31 @@ a{
 }
 
 body{
-  font-family: var(--body-font); 
-  width: 100%;  
+  font-family: var(--body-font);  
+  background-color: black; 
+  color: var(--text-color-light);
 }
 
-html {
-  scroll-behavior: smooth;
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--max-width-container);
+    padding: 0 1rem;  
+  }
+
+button {
+  padding: 0.5rem 1.2rem;
+  background-color: var(--base-color-alt);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
+button:hover{
+  background-color: #000000;
+  border:1px solid var(--base-color-alt);
+  color: white;
+}
 /* NAV STYLES */
 
 nav ul li {
@@ -66,7 +103,7 @@ nav ul li a {
 
 nav ul li a:hover{
   color: var(--base-color-alt);
-  -webkit-font-smoothing:auto
+  -webkit-font-smoothing:auto  
 }
 
 nav ul li a::after{
@@ -83,7 +120,7 @@ nav ul li a::after{
 nav ul li a:hover::after,
 nav ul li a.active::after{
   width: 100%;
-
+  
 }
 
 .nav {
@@ -92,6 +129,12 @@ nav ul li a.active::after{
   justify-content: space-between; 
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+
+   margin: 0 auto;
+   max-width: var(--max-width-container);
+   padding: 0 1rem; 
+
+ 
  }
 
  .nav-links a {
@@ -103,25 +146,84 @@ nav ul li a.active::after{
  }
  .menu {
   display: flex;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 
  } 
  .menu li {
   padding: 5px 14px;
  }
 
+ /* HOME */
+
+#home{
+  display: flex;
+  align-items: center; 
+  height: 100vh;
+  gap: 4rem;
+ 
+}
+
+#home img{
+ width: 20rem;
+ height: 20rem;
+ border-radius: 50%;
+
+}
+
+#home h1{
+  color: var(--base-color-alt);
+}
+
+.home-container-img{
+  text-align: center;
+}
+
+/* SERVICES */
+
 #services i{
   font-size: 2rem;
   color: var(--base-color-alt);
-  cursor: pointer;
+
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
- }
+h4{
+  color: var(--base-color-alt) ;
+}
 
-.clear{
+#services{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-card-container{
+  display: flex;  
+  align-items: center; 
+  /* flex-wrap: wrap; */
+  gap: 0.8rem;
+}
+
+.service-card{
+  margin-top: 1rem;
+  background-color: #191A19;
+  height: 5rem;
+  width: 2rem; 
+  flex: 1;
+  box-shadow: 0px 4px 27px -3px #000000; 
+  padding: 1rem;  
+  border-bottom: 0.5px solid var(--base-color-alt);
+}
+
+.service-card:hover{
+  border-bottom: 0.5px solid var(--base-color-alt);
+  background-color: black;
+  cursor: pointer;
+}
+/* 
+ /* Estilização footer */
+
+ .clear{
   clear: both;
 }
 footer{
@@ -130,7 +232,7 @@ footer{
   padding: 10px 2%;
   background-color: black;
 }
-footer .container{
+footer .footer-wrapper{
   max-width: 100%;
 }
 footer .footer-block{
@@ -166,5 +268,55 @@ footer .direitos h2{
   position: relative;
 }*/
 
+/* Social Icons */
+footer .fa-brands{
+  padding: 3px 3px;
+  margin: 4px 2px;
+  opacity: 0.4;
+  color: hsl(var(--hue) 57% 53%);
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;  
+}
+/* Fim da estilização do Footer */
 
+/* Efeito de Girar Social Icons */
+.fa-brands:hover {
+  transform:rotate(360deg);
+  -ms-transform:rotate(360deg);
+  -webkit-transform:rotate(360deg);
+  opacity: 1;
+  color: hsl(var(--hue) 57% 53%);
+}
+ /* Hover Link */
+ footer .link:hover {
+  color: hsl(var(--hue) 57% 53%);
+}
 
+/* 
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+*/
+
+/* Responsivo */
+@media screen and (max-width: 470px){
+  footer{
+		text-align: center;
+	}
+
+	footer .footer-block{
+	float: none;
+	width: 100%;
+	margin:30px 0;
+	}
+
+  footer .sobre{
+    padding-left: 0;
+  }
+  
+}
