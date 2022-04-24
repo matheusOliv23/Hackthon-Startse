@@ -46,8 +46,8 @@ body::-webkit-scrollbar {
 } 
 
 body::-webkit-scrollbar-thumb {
-      background: var(--base-color-alt);
-      border-radius: 10px;
+   background: var(--base-color-alt);
+   border-radius: 10px;
 }
 
 ul{
@@ -63,6 +63,63 @@ body{
   background-color: black; 
   color: var(--text-color-light);
 }
+
+/* NAV STYLES */
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover{
+  color: var(--base-color-alt);
+  -webkit-font-smoothing:auto  
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0%;
+  height: 1px;
+  background: var(--base-color);
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem; 
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after{
+  width: 100%;
+  
+}
+
+.nav {
+  display: flex;
+  align-items:center;
+  justify-content: space-between; 
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+ }
+
+ .nav-links a {
+  color: var(--text-color-light);
+ }
+
+ .logo{
+   font-size: 1.3rem;
+ }
+ .menu {
+  display: flex;
+  font-size: 0.9rem;
+
+ } 
+ .menu li {
+  padding: 5px 14px;
+ }
 
 #services i{
   font-size: 2rem;
@@ -106,18 +163,13 @@ h4{
 }
 
 .container {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 50rem;
-    padding: 0 1rem;  
+   width: 100%;
+   margin: 0 auto;   
+   padding: 0 1rem;  
  }
 
 
-@media (min-width: 992px){
-  .container{
-   
-  }
-}
+
 
 
 
