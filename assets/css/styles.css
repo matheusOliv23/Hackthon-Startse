@@ -31,6 +31,8 @@
   --title-font: 'Poppins', sans-serif;
   --body-font: 'Poppins', sans-serif;
 
+  --max-width-container: 70rem
+
 
 }
 
@@ -71,7 +73,7 @@ body{
 .container {
     width: 100%;
     margin: 0 auto;
-    max-width: 63rem;
+    max-width: var(--max-width-container);
     padding: 0 1rem;  
   }
 
@@ -129,7 +131,7 @@ nav ul li a.active::after{
   color: rgb(255, 255, 255);
 
    margin: 0 auto;
-   max-width: 63rem;
+   max-width: var(--max-width-container);
    padding: 0 1rem; 
 
  
@@ -219,7 +221,6 @@ h4{
   cursor: pointer;
 }
 /* 
-
  /* Estilização footer */
 
  .clear{
@@ -319,8 +320,3 @@ footer .fa-brands{
   }
   
 }
-
-
-
-
-
