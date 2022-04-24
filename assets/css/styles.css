@@ -68,11 +68,26 @@ body{
   color: var(--text-color-light);
 }
 
-html {
-  scroll-behavior: smooth;
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 63rem;
+  padding: 0 1rem;
 }
 
-/* NAV STYLES */
+button {
+padding: 0.5rem 1.2rem;
+background-color: var(--base-color-alt);
+border: none;
+border-radius: 2px;
+cursor: pointer;
+}
+
+button:hover{
+background-color: #000000;
+border:1px solid var(--base-color-alt);
+color: white;
+}
 
 nav ul li {
   text-align: center;
@@ -102,6 +117,7 @@ nav ul li a::after{
 nav ul li a:hover::after,
 nav ul li a.active::after{
   width: 100%;
+
 }
 
 .nav {
@@ -110,6 +126,12 @@ nav ul li a.active::after{
   justify-content: space-between; 
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+
+   margin: 0 auto;
+   max-width: 63rem;
+   padding: 0 1rem; 
+
+ 
  }
 
  .nav-links a {
@@ -119,14 +141,40 @@ nav ul li a.active::after{
  .logo{
    font-size: 1.3rem;
  }
+
  .menu {
   display: flex;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 
  } 
  .menu li {
   padding: 5px 14px;
  }
+
+ /* HOME */
+
+#home{
+  display: flex;
+  align-items: center; 
+  height: 100vh;
+  gap: 4rem;
+ 
+}
+
+#home img{
+ width: 20rem;
+ height: 20rem;
+ border-radius: 50%;
+
+}
+
+#home h1{
+  color: var(--base-color-alt);
+}
+
+.home-container-img{
+  text-align: center;
+}
 
 #services i{
   font-size: 2rem;
@@ -146,7 +194,7 @@ h4{
 }
 
 .service-card-container{
-  display: flex;  
+  display: flex;
   align-items: center; 
   /* flex-wrap: wrap; */
   gap: 0.8rem;
@@ -159,7 +207,7 @@ h4{
   width: 2rem; 
   flex: 1;
   box-shadow: 0px 4px 27px -3px #000000; 
-  padding: 1rem;  
+  padding: 1rem;
   border-bottom: 0.5px solid var(--base-color-alt);
 }
 
@@ -168,11 +216,8 @@ h4{
   background-color: black;
   cursor: pointer;
 }
-/* 
 
- /* Estilização footer */
-
- .clear{
+.clear{
   clear: both;
 }
 footer{
@@ -212,12 +257,7 @@ footer .direitos h2{
   font-size: 6px;
   color: rgba(33,101,101,10);
 }
-/*
-.underline{
-  position: relative;
-}*/
 
-/* Social Icons */
 footer .fa-brands{
   padding: 3px 3px;
   margin: 4px 2px;
@@ -225,11 +265,9 @@ footer .fa-brands{
   color: hsl(var(--hue) 57% 53%);
   -webkit-transition: -webkit-transform .8s ease-in-out;
   -ms-transition: -ms-transform .8s ease-in-out;
-    transition: transform .8s ease-in-out;  
+    transition: transform .8s ease-in-out;
 }
-/* Fim da estilização do Footer */
 
-/* Efeito de Girar Social Icons */
 .fa-brands:hover {
   transform:rotate(360deg);
   -ms-transform:rotate(360deg);
@@ -242,40 +280,23 @@ footer .fa-brands{
   color: hsl(var(--hue) 57% 53%);
 }
 
-/* 
-@media (hover: hover) and (pointer: fine) {
-  .underline:hover::before{
-    left: 0;
-    right: auto;
-    width: 100%;
-    margin: 0 auto;
- }
-
-
-@media (min-width: 992px){
-  .container{
-   
-  }
-}
-*/
-
-/* Responsivo */
 @media screen and (max-width: 470px){
   footer{
-		text-align: center;
-	}
+        text-align: center;
+    }
 
-	footer .footer-block{
-	float: none;
-	width: 100%;
-	margin:30px 0;
-	}
+    footer .footer-block{
+    float: none;
+    width: 100%;
+    margin:30px 0;
+    }
 
   footer .sobre{
     padding-left: 0;
   }
-  
+
 }
+
 
 
 
