@@ -263,9 +263,6 @@ footer .direitos h2{
   color: rgba(33,101,101,10);
 }
 /*
-.underline{
-  position: relative;
-}*/
 
 /* Social Icons */
 footer .fa-brands{
@@ -291,16 +288,6 @@ footer .fa-brands{
  footer .link:hover {
   color: hsl(var(--hue) 57% 53%);
 }
-
-/* 
-@media (hover: hover) and (pointer: fine) {
-  .underline:hover::before{
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-}
-*/
 
 /* Responsivo */
 @media screen and (max-width: 470px){
