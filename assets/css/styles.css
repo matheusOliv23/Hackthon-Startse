@@ -77,12 +77,23 @@ body{
     padding: 0 1rem;  
   }
 
-button {
+.title{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+button  {
   padding: 0.5rem 1.2rem;
   background-color: var(--base-color-alt);
+  font-family: var(--body-font);  
+  font-weight: bold;
   border: none;
   border-radius: 2px;
   cursor: pointer;
+  width: 10rem;
+  height: 2rem;
+ 
 }
 
 button:hover{
@@ -90,15 +101,29 @@ button:hover{
   border:1px solid var(--base-color-alt);
   color: white;
 }
+
+ n{
+  color: var(--base-color-alt);
+}
 /* NAV STYLES */
+
+#header{
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;   
+}
 
 nav ul li {
   text-align: center;
+ 
 }
 
 nav ul li a {
   transition: color 0.2s;
   position: relative;
+  font-size: 0.7rem;
 }
 
 nav ul li a:hover{
@@ -129,10 +154,12 @@ nav ul li a.active::after{
   justify-content: space-between; 
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+  
 
    margin: 0 auto;
    max-width: var(--max-width-container);
-   padding: 0 1rem; 
+   padding: 0.3rem 1.2rem; 
+
 
  
  }
@@ -153,6 +180,29 @@ nav ul li a.active::after{
   padding: 5px 14px;
  }
 
+ /* TOGGLE MENU */
+
+.toggle {
+  color: var(--base-color-alt);
+  font-size: 1.5rem;
+}
+
+/* Style the navigation menu */
+.nav {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+/* .nav #myLinks {
+  display: none;
+} */
+
+/* Style navigation menu links */
+
+
+
+
  /* HOME */
 
 #home{
@@ -170,14 +220,27 @@ nav ul li a.active::after{
 
 }
 
-#home h1{
-  color: var(--base-color-alt);
-}
 
 .home-container-img{
   text-align: center;
 }
 
+.home-container-button{
+  display: flex;
+  gap: 1rem;
+}
+
+.home-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width:600px){
+ .home-container-img{
+   display: none;
+  }
+}
 /* SOBRE*/
 
 #sobre{
@@ -188,8 +251,7 @@ nav ul li a.active::after{
 
 .inner-container{
   text-align: end;
-  width: 55%;
-  background-color: var(--background-color-one);
+  width: 55%; 
   padding: 15px;
 }
 
@@ -258,15 +320,21 @@ h4{
 .service-card-container{
   display: flex;  
   align-items: center; 
+  flex-direction: column;
   /* flex-wrap: wrap; */
   gap: 0.8rem;
+  margin-bottom: 2rem;
+
+ 
 }
 
 .service-card{
   margin-top: 1rem;
   background-color: #191A19;
-  height: 5rem;
-  width: 2rem; 
+  padding: 1.5rem;
+  height: 100%;
+  width: 100%;
+  /* width: 2rem;  */
   flex: 1;
   box-shadow: 0px 4px 27px -3px #000000; 
   padding: 1rem;  
@@ -278,9 +346,117 @@ h4{
   background-color: black;
   cursor: pointer;
 }
-/* 
 
- /* Estilização footer */
+.card-title{
+  font-size: 1.3rem;
+  color: var(--base-color-alt);
+  font-weight: bold;
+}
+
+@media (min-width:1200px){
+  .service-card-container{
+    flex-direction: row;
+  }
+  .service-card{
+    height: auto;
+  }
+}
+
+/* TALENTOS */
+ 
+#talentos {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  
+  justify-content: center;
+  gap: 2rem;
+}
+
+#talentos p{
+  
+}
+
+@media screen and (max-width:500px){
+ #talentos {
+   height: auto;
+ }
+}
+
+
+/* NÓS */
+
+#fundadores {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.fundadores-cards-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.fundadores-card{
+  margin-top: 1rem;
+  background-color: #191A19;
+  padding: 1.5rem;
+ 
+  border-radius: 0.5rem;
+  text-align: center;
+  /* width: 2rem;  */
+  flex: 1;
+  box-shadow: 0px 4px 27px -3px #000000; 
+  padding: 1rem;  
+  border-bottom: 0.5px solid var(--base-color-alt);
+  border-top: 0.5px solid var(--base-color-alt);
+}
+
+#fundadores img{
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+
+#fundadores i{
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.email{
+  font-size: 0.7rem;
+}
+
+@media (min-width:600px){
+ .fundadores-cards-container{
+   flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:1000px){
+  #fundadores{
+    height: auto;
+  }
+  .fundadores-card{
+   height: auto;
+  }
+}
+
+@media (min-width:1000px){
+  .fundadores-cards-container{
+    flex-direction: row;
+  }
+}
+/* Estilização footer */
 
  .clear{
   clear: both;
@@ -323,9 +499,6 @@ footer .direitos h2{
   color: rgba(33,101,101,10);
 }
 /*
-.underline{
-  position: relative;
-}*/
 
 /* Social Icons */
 footer .fa-brands{
@@ -352,18 +525,24 @@ footer .fa-brands{
   color: hsl(var(--hue) 57% 53%);
 }
 
-/* 
-@media (hover: hover) and (pointer: fine) {
-  .underline:hover::before{
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-}
-*/
-
 /* Responsivo */
 @media screen and (max-width: 470px){
+  nav ul .menu{
+    display: none;    
+  }
+  #home{
+    gap: 1rem;
+  }
+  #home .home-container-img{
+    display: none;
+  }
+  #sobre{
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #services{
+    height: auto;
+  }
   footer{
 		text-align: center;
 	}
@@ -378,4 +557,35 @@ footer .fa-brands{
     padding-left: 0;
   }
   
+}
+
+@media screen and (max-width: 800px){
+  .service-card-container{
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;  
+  }
+  .service-card{
+    width: 100%;
+  }
+  
+}
+
+@media (min-width:800px){
+    nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul{
+    display: block;
+    gap: 2rem;
+  }
+
+  
+  nav .icon {
+    display: none;
+  }
+
 }
