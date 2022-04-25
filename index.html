@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <!--FONTS-->
@@ -14,58 +15,75 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
    <!--ICONS-->
   <script src="https://kit.fontawesome.com/941e120c9d.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <title>Hackathon</title>
+  <title>TISolutions</title>
 </head>
 
 <body>
+  <header id="header">
+    <nav class="nav">
+        <a class="logo">TI Solutions</a>
+        <ul class="nav-links" >
+            <div id="myLinks" class="menu">
+              <li><a href=#home>Home</a></li>
+              <li><a href=#sobre>Sobre</a></li>
+              <li><a href=#empresas>Para Empresas</a></li>
+              <li><a href=#talentos>Talentos</a></li>
+              <li><a href=#services>Serviços</a></li>
+              <li><a href=#contato>Contato</a></li>
+            </div>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="toggle fa fa-bars"></i>
+        </a>       
+    </nav>
+  </header>
 
-  <nav class="nav">
-    <div class="logo">TI Solutions</div>
-    <ul class="nav-links">
-        <div class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Para Empresas</a></li>
-          <li><a href="https://www.google.com/%22%3ETalentos">Talentos</a></li>
-          <li><a href=#services>Serviços</a></li>
-          <li><a href="#">Contato</a></li>
-        </div>
-    </ul>
-  </nav>
+  
 
   <main class="container">
 
     <section id="home">
      
-      <div> <h1>Vamos ajudar</h1>
-      <p>Após passar pela nossa banca de avaliações, definiremos se você entrará ou não para o nosso banco de dados</p>
+      <div class="home-text"> 
+      <h1>Vamos ajudar</h1>
+      <p>
+        Cansado de fazer um monte de processos seletivos e não passar ? Ou até mesmo não conseguir nem passar para a etapa de entrevistas?
+        Estamos aqui para resolver isso !
+      </p>
       
       <button>Venha conhecer</button>
       </div>
       <div class="home-container-img">
-         <img src="assets/img/cidade-inteligente-futurista.webp" alt="">
+        <img src="assets/img/cidade-inteligente-futurista.webp" alt="">
         <a href="https://br.freepik.com/fotos-vetores-gratis/cidade-inteligente">Cidade inteligente foto criado por rawpixel.com - br.freepik.com</a>
       </div>
      
      
-    </section>
-
+    </section>    
 
     <section id="services">
 
           <h1>Serviços</h1>
-          <h4>is simply dummy text of the printing </h4>
+          <h4>Nosso foco é mostrar para as empresas os talentosos!</h4>
 
           <div class="service-card-container">
             <div class="service-card">      
               <i class="fa fa-brands fa-creative-commons-remix"></i>
+              <div class="card-title">Treinamentos</div>
+              <div> Oferecemos um treinamento gratuito, objetivo e eficiente com foco em garantir que você tenha o básico exigido pelas empresas! </div>
             </div>
             <div class="service-card">
             <i class="fa fa-brands fa-creative-commons-remix"></i>
+            <div class="card-title">Entrevistas</div>
+              <div>Para que você tenha uma experiência real, você sentirá na pele como é uma entrevista comportamental e técnica na prática, com direito a feedbacks para que você possa se aperfeiçoar.</div>
             </div>
             <div class="service-card">
               <i class="fa fa-brands fa-creative-commons-remix"></i>
+              <div class="card-title">Portfólio</div>
+              <div>Avaliaremos seus portfólios (LinkedIn, Github, Site profissional, seus sites já criados).</div>
             </div>
           </div>
 
@@ -80,8 +98,8 @@
 
       <div class="footer-block">
           <div class="travel">
-          <h2>Travel</h2>
-          <p>Na Tourist você escolhe seu destino e o levaremos!</p>
+          <h2>TI Solutions</h2>
+          <p>Faremos do seu sonho, uma realidade</p>
             <div class="social"></div>
               <a href="http://wwww.facebook.com.br" target="_blanck"><i class="fa fa-brands fa-facebook-f"></i></a>
               <a href="https://www.instagram.com/" target="_blanck"><i class="fa fa-brands fa-instagram"></i>
@@ -130,7 +148,7 @@
 
   </footer>
   
-
+ <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

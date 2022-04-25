@@ -83,6 +83,9 @@ button {
   border: none;
   border-radius: 2px;
   cursor: pointer;
+  width: 10rem;
+  height: 2rem;
+ 
 }
 
 button:hover{
@@ -92,13 +95,23 @@ button:hover{
 }
 /* NAV STYLES */
 
+#header{
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;   
+}
+
 nav ul li {
   text-align: center;
+ 
 }
 
 nav ul li a {
   transition: color 0.2s;
   position: relative;
+  font-size: 0.7rem;
 }
 
 nav ul li a:hover{
@@ -129,10 +142,12 @@ nav ul li a.active::after{
   justify-content: space-between; 
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+  
 
    margin: 0 auto;
    max-width: var(--max-width-container);
-   padding: 0 1rem; 
+   padding: 0.3rem 1.2rem; 
+
 
  
  }
@@ -152,6 +167,29 @@ nav ul li a.active::after{
  .menu li {
   padding: 5px 14px;
  }
+
+ /* TOGGLE MENU */
+
+.toggle {
+  color: var(--base-color-alt);
+  font-size: 1.5rem;
+}
+
+/* Style the navigation menu */
+.nav {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+/* .nav #myLinks {
+  display: none;
+} */
+
+/* Style navigation menu links */
+
+
+
 
  /* HOME */
 
@@ -178,6 +216,12 @@ nav ul li a.active::after{
   text-align: center;
 }
 
+.home-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 /* SERVICES */
 
 #services i{
@@ -202,13 +246,17 @@ h4{
   align-items: center; 
   /* flex-wrap: wrap; */
   gap: 0.8rem;
+  margin-bottom: 2rem;
+
+ 
 }
 
 .service-card{
   margin-top: 1rem;
   background-color: #191A19;
-  height: 5rem;
-  width: 2rem; 
+  padding: 1.5rem;
+  height: auto;
+  /* width: 2rem;  */
   flex: 1;
   box-shadow: 0px 4px 27px -3px #000000; 
   padding: 1rem;  
@@ -219,6 +267,12 @@ h4{
   border-bottom: 0.5px solid var(--base-color-alt);
   background-color: black;
   cursor: pointer;
+}
+
+.card-title{
+  font-size: 1.3rem;
+  color: var(--base-color-alt);
+  font-weight: bold;
 }
 /* 
  /* Estilização footer */
@@ -292,6 +346,18 @@ footer .fa-brands{
 
 /* Responsivo */
 @media screen and (max-width: 470px){
+  nav ul .menu{
+    display: none;    
+  }
+  #home{
+    gap: 1rem;
+  }
+  #home .home-container-img{
+    display: none;
+  }
+  #services{
+    height: auto;
+  }
   footer{
 		text-align: center;
 	}
@@ -306,4 +372,35 @@ footer .fa-brands{
     padding-left: 0;
   }
   
+}
+
+@media screen and (max-width: 800px){
+  .service-card-container{
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;  
+  }
+  .service-card{
+    width: 100%;
+  }
+  
+}
+
+@media (min-width:800px){
+    nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul{
+    display: block;
+    gap: 2rem;
+  }
+
+  
+  nav .icon {
+    display: none;
+  }
+
 }
