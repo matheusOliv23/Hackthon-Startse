@@ -77,6 +77,12 @@ body{
     padding: 0 1rem;  
   }
 
+.title{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
 button {
   padding: 0.5rem 1.2rem;
   background-color: var(--base-color-alt);
@@ -222,6 +228,63 @@ nav ul li a.active::after{
   gap: 2rem;
 }
 
+/* SOBRE*/
+
+#sobre{
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+.inner-container{
+  text-align: end;
+  width: 55%; 
+  padding: 15px;
+}
+
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.inner-container n{
+  color: var(--base-color-alt);
+}
+
+.text{
+  font-size: 13px;
+  color: var( --text-color-light);
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width:1200px){
+  .inner-container{
+      padding: 80px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .about-section{
+      background-size: 100%;
+      padding: 100px 40px;
+  }
+  .inner-container{
+      width: 100%;
+  }
+}
+
+@media screen and (max-width:600px){
+  .about-section{
+      padding: 0;
+  }
+  .inner-container{
+      padding: 60px;
+  }
+}
+
 /* SERVICES */
 
 #services i{
@@ -275,6 +338,7 @@ h4{
   font-weight: bold;
 }
 /* 
+
  /* Estilização footer */
 
  .clear{
